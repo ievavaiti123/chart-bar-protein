@@ -1,8 +1,9 @@
 
 let protein;
+let canvas;
 
 function setup() {
-createCanvas(windowWidth, windowHeight);
+canvas = createCanvas(windowWidth, windowHeight);
  
   angleMode(DEGREES);
   //no animation / interaction chart
@@ -25,8 +26,9 @@ createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
+  setup();
   background(200);
-
+  
 }
 
 function drawChart(){
@@ -83,4 +85,8 @@ function drawChart(){
   // as according to https://www.nutritionadvance.com/protein-content-of-common-foods/
   // and https://fdc.nal.usda.gov/fdc-app.html#/
 
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
